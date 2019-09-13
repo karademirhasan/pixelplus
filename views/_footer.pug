@@ -1,0 +1,21 @@
+footer.footer
+    .container
+        .footer-inner
+            .logo
+                a(href="#", target="_blank", rel="noopener noreferrer")
+                    span.orange FUN 
+                    span.blue  WEATHER.
+            .menu
+                each val, index in ['Home', 'Features', 'Reviews', 'Download']
+                    a(href="#", target="_blank")= val
+            .social-media
+                a(href='facebook.com')
+                    i.fab.fa-facebook-f
+                a(href='instagram.com')
+                    i.fab.fa-instagram
+                a(href='twitter.com')
+                    i.fab.fa-twitter
+    hr.footer-line
+    .container
+        .footer-bottom
+            p © 2016 All rights reserved. Weather App Theme by Gravpix

@@ -1,0 +1,195 @@
+doctype html  
+html(lang='en')  
+    head
+        title Weather App Page
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta( charset='UTF-8')
+        link(href='assets/css/style.min.css', rel='stylesheet')
+        link(href='https://use.fontawesome.com/releases/v5.8.1/css/all.css', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap&subset=latin-ext', rel='stylesheet')
+
+    body
+
+    include _header.pug
+
+    section.perfect-features
+        .container
+            .section-title
+                h3 PERFECT FEATURES
+                span Only necessary
+            .perfect-features-inner
+                .row
+                    .col
+                        .feature-item
+                            .icon
+                                img(src="assets/img/icon-1.png", alt="", srcset="")
+                            .text
+                                h4.title Usability
+                                .desc Sometimes the simplest things are the hardest to find. So we created a new line for everyday life
+                    .col
+                        .feature-item
+                            .icon
+                                img(src="assets/img/icon-2.png", alt="", srcset="")
+                            .text
+                                h4.title Parallax Effect
+                                .desc Sometimes the simplest things are the hardest to find. So we created a new line for everyday life
+                    .col
+                        .feature-item
+                            .icon
+                                img(src="assets/img/icon-3.png", alt="", srcset="")
+                            .text
+                                h4.title Unlimites Colors
+                                .desc Sometimes the simplest things are the hardest to find. So we created a new line for everyday life
+
+
+
+
+    section.simple-widgets
+        .container
+            .section-title
+                h3 SIMPLE WIDGETS
+                span Drag and Drop
+            .simple-widgets-inner
+                #carousel
+                    .prev
+                        img(src="assets/img/slider-1.png", alt="", srcset="")
+                    .selected
+                        img(src="assets/img/slider-2.png", alt="", srcset="")
+                    .next
+                        img(src="assets/img/slider-3.png", alt="", srcset="")
+                .slider-buttons
+                    button#prev
+                        i.fas.fa-chevron-left
+                    button#next
+                        i.fas.fa-chevron-right
+                   
+                
+
+
+
+    section.screenshots
+        .container
+            .section-title
+                 h3 SCREENSHOTS
+                 span The brightest images
+            .screenshots-inner
+                .screenshot-item
+                    .row
+                        .col
+                            .screenshot-left
+                                .phone-img(title="Cloudy")
+                                    img(src="assets/img/screenshot-1.png", title="Cloudy" alt="")
+                                    .circles
+                                        .item(style="background: #6ca3ff") 15°
+                                        .item(style="background: #fcec64") Cloudy
+                        .col
+                            .screenshot-right
+                                .icon
+                                    img(src="assets/img/icon-cloudy.png", alt="")
+                                h5.title WHEN THE CLOUDS
+                                p Variable information on the air humidity, the feeling of the weather, and the ability to share this with your friends
+                                .tags
+                                    each val, index in ['95%', '15°', 'Cloudy']
+                                        .tag= val
+
+
+                .screenshot-item
+                    .row
+                        .col
+                            .screenshot-left
+                                .phone-img(title="Sunny")
+                                    img(src="assets/img/screenshot-2.png", title="Sunny" alt="")
+                                    .circles
+                                        .item(style="background: #fc6a42") 15°
+                                        .item(style="background: #f2a14e") Sunny
+                        .col
+                            .screenshot-right
+                                .icon
+                                    img(src="assets/img/icon-sunny.png", alt="")
+                                h5.title WHEN THE SUN
+                                p Variable information on the air humidity, the feeling of the weather, and the ability to share this with your friends
+                                .tags
+                                    each val, index in ['95%', '35°', 'Sunny']
+                                        .tag= val
+
+                .screenshot-item
+                    .row
+                        .col
+                            .screenshot-left
+                                .phone-img(title="Rainy")
+                                    img(src="assets/img/screenshot-3.png", title="Rainy" alt="")
+                                    .circles
+                                        .item(style="background: #7693c8") 9°
+                                        .item(style="background: #b8faee; color: #7e8c91" ) Rainy
+                        .col
+                            .screenshot-right
+                                .icon
+                                    img(src="assets/img/icon-rainy.png", alt="")
+                                h5.title WHEN THE RAIN
+                                p Variable information on the air humidity, the feeling of the weather, and the ability to share this with your friends
+                                .tags
+                                    each val, index in ['95%', '9°', 'Rainy']
+                                        .tag= val
+                                
+    section.comments
+        .container
+            .section-title
+                h3 WHAT PEOPLE ARE SAYING
+                span Reviews
+            .comments-inner
+                .row
+                    .col
+                        .comment
+                            .comment-text What art offers is space - a certain breathing room for the spirit. 
+                            .comment-arthur John Updike
+
+                    .col
+                        .comment
+                            .comment-text What art offers is space - a certain breathing room for the spirit. 
+                            .comment-arthur John Updike
+
+                .row
+                    .col
+                        .comment
+                            .comment-text What art offers is space - a certain breathing room for the spirit. 
+                            .comment-arthur John Updike
+
+
+                    .col
+                        .comment
+                            .comment-text What art offers is space - a certain breathing room for the spirit. 
+                            .comment-arthur John Updike
+
+    section.download
+        .lines-download
+            - for ( i=1; i <= 8 ; i++ )
+                i()
+        .container
+            .download-inner
+                .row
+                    .col
+                        .download-left
+                            h4 HOW DOWNLOAD THE APP?
+                            p Just download the app from the store. Simple, nice and user-friendly application of theweather. Only relevant and useful information.
+                            .download-links
+                                a(href="#")
+                                    img(src="assets/img/appstore.png", alt="", srcset="")
+                                a(href="#")
+                                    img(src="assets/img/googleplay.png", alt="", srcset="")
+                    .col
+                        .download-right
+                            .phones
+                                img(src="assets/img/screenshot-1.png", alt="")
+                                img(src="assets/img/screenshot-2.png", alt="")
+                                img(src="assets/img/screenshot-3.png", alt="")
+
+
+
+
+    include _footer.pug
+
+
+
+
+
+    script(src='assets/js/main.min.js')

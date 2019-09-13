@@ -1,0 +1,44 @@
+.lines
+    - for ( i=1; i <= 8 ; i++ )
+        i()
+
+
+
+header.header
+    .header-inner.container
+        .header-top
+            .logo
+                a(href="#", target="_blank", rel="noopener noreferrer") FUN WEATHER.
+            .menu
+                each val, index in ['Home', 'Features', 'Reviews', 'Download']
+                    a(href="#", target="_blank")= val
+            .social-media
+                a(href='facebook.com')
+                    i.fab.fa-facebook-f
+                a(href='instagram.com')
+                    i.fab.fa-instagram
+                a(href='twitter.com')
+                    i.fab.fa-twitter
+        .header-area
+            .row
+                .col
+                    .header-left
+                        h2 Get the most fun weather app
+                        p   Simple, nice and user-friendly application of the weather. Only useful information
+                        .links
+                            a(href='#').button.button-link.button-orange Download
+                            a(href='#').button.button-link.button-blue Featues
+                .col
+                    .header-right
+                        img(src="assets/img/header-phone.png", alt="",).header-phone
+                        .circles
+                            each val, index in ['SUNNY', '9°', 'LONDON', 'RIO']
+                                div(href="#", target="_blank").circle= val
+        
+        
+        .row
+            a(href="#").down-button
+                i.fas.fa-angle-down
+
+
+

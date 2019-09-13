@@ -1,0 +1,29 @@
+// EXTRAS
+@import "others/normalize";
+@import "others/mixins";
+@import "others/responsive";
+@import "variables";
+@import "global";
+
+@import "grid";
+@import "main";
+
+
+// COMPONENTS
+@import "components/elements";
+
+@import "components/carousel";
+
+@import "components/header";
+@import "components/footer";
+
+
+// PAGES
+@import "pages/homepage.scss"
+
+
+/*
+
+// SPECIALS
+@import "xxl";
+@import "ios"; */
