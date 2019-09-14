@@ -94,8 +94,16 @@
       }
       #prev {
         left: 0;
+        @include respond-below(md) {
+          bottom: 0;
+          top: auto;
+        } 
       }
       #next {
         right: 0;
+        @include respond-below(md) {
+          bottom: 0;
+          top: auto;
+        } 
       }
   }

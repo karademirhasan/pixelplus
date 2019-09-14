@@ -10,8 +10,26 @@ header.header
             .logo
                 a(href="#", target="_blank", rel="noopener noreferrer") FUN WEATHER.
             .menu
-                each val, index in ['Home', 'Features', 'Reviews', 'Download']
-                    a(href="#", target="_blank")= val
+                ul
+                    li
+                        a(href="#") Home
+                        .dropdown 
+                            ul
+                                li
+                                    a(href='#') Features
+                                li
+                                    a(href='#') Reviews
+                                li
+                                    a(href='#') Download
+                    li
+                        a(href="#") Features
+                    li
+                        a(href="#") Reviews
+                    li
+                        a(href="#") Download
+            .mobile-menu-button
+
+
             .social-media
                 a(href='facebook.com')
                     i.fab.fa-facebook-f
@@ -29,11 +47,11 @@ header.header
                             a(href='#').button.button-link.button-orange Download
                             a(href='#').button.button-link.button-blue Featues
                 .col
-                    .header-right
-                        img(src="assets/img/header-phone.png", alt="",).header-phone
+                    .header-right()
+                        img(src="assets/img/header-phone.png", data-aos="fade-up", alt="",).header-phone
                         .circles
                             each val, index in ['SUNNY', '9°', 'LONDON', 'RIO']
-                                div(href="#", target="_blank").circle= val
+                                div(href="#", data-aos="zoom-in", target="_blank").circle= val
         
         
         .row

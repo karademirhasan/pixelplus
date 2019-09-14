@@ -24,9 +24,15 @@ section {
   position: relative;
 
   &-inner { 
+    @include respond-below(md) {
+      padding: $mobile-padding;
+    } 
     .feature-item {
       display: flex;
       flex-direction: row;
+      @include respond-below(md) {
+        margin-bottom: 40px;
+      } 
       .icon {
         img {
 
@@ -71,6 +77,9 @@ section {
       &:nth-child(2n) {
         .row {
           flex-direction: row-reverse;
+          @include respond-below(md) {
+            flex-direction: column;
+          } 
         }
       }
       .screenshot-left {
@@ -92,7 +101,9 @@ section {
               left: 0;
               font-weight: 100;
               z-index: 3;
-              
+              @include respond-below(md) {
+                display: none;
+              } 
             }
           img {
             position: relative;
@@ -141,6 +152,9 @@ section {
       .screenshot-right {
         display: flex;
         flex-direction: column;
+        @include respond-below(md) {
+          padding: $mobile-padding;
+        } 
         .icon {
 
         }
@@ -255,6 +269,11 @@ section {
     i {
         width: 1px;
         background: #86a5fd;
+        @include respond-below(md) {
+            &:nth-child(2n + 1) {
+                display: none
+            }
+        }
     }
   }
   margin-top: 60px;
@@ -269,6 +288,10 @@ section {
       flex-direction: column;
       justify-content: center;
       margin-top: 100px;
+      @include respond-below(md) {
+        padding: $mobile-padding;
+        margin-top: 20px;
+      } 
       h4 {
         color: white;
         font-size: 2em;
@@ -279,6 +302,9 @@ section {
         width: 50%;
         margin-bottom: 20px;
         font-weight: 400;
+        @include respond-below(md) {
+          width: 100%;
+        } 
 
       }
       .download-link {
@@ -287,6 +313,9 @@ section {
       }
     }
     .download-right {
+      @include respond-below(md) {
+        display: none;
+      } 
       .phones {
         display: flex;
         img {

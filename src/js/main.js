@@ -5,17 +5,32 @@ $(document).ready(function () {
     $('.down-button').click(function(e){
         e.preventDefault;
         $("html, body").animate({
-            scrollTop: 600
+            scrollTop: 700
         }, 500);
     });
 
-    var pageHeight = document.body.scrollHeight;
-    var downloadSection = $('.download').height();
-    var footerSection = $('.footer').height();
-    var lineHeight = pageHeight - (footerSection + downloadSection);
-    console.log(lineHeight)
-    $('.lines').css({
-            'min-height': lineHeight
+    $('.up-button').click(function(e){
+        e.preventDefault;
+        $("html, body").animate({
+            scrollTop: 0
+        }, 800);
+    });
+
+    function lines() {
+        var pageHeight = document.body.scrollHeight;
+        var downloadSection = $('.download').height();
+        var footerSection = $('.footer').height();
+        var lineHeight = pageHeight - (footerSection + downloadSection);
+        $('.lines').css({
+                'min-height': lineHeight
+        })
+    }
+
+    lines();
+
+    $('.mobile-menu-button').click(function() {
+        $(this).toggleClass('active');
+        $('.menu').toggleClass('active');
     })
 
     function moveToSelected(element) {
@@ -75,16 +90,9 @@ $(document).ready(function () {
     });
 
 
-    
-});
+    $(window).resize(function () {
+        lines();
+    });
 
-
-
-
-
-
-
-
-$(window).resize(function () {
-
+    AOS.init();
 });

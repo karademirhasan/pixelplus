@@ -20,6 +20,7 @@ var path = {
 // STYLES
 gulp.task('styles', function() {
     return gulp.src([
+        path.libs   +   "aos-next/dist/aos.css",
         path.sass   +    "style.scss",
     ])
     .pipe(sourcemaps.init())
@@ -42,6 +43,7 @@ gulp.task('scripts', function() {
 
     return gulp.src([
         path.libs   +   "jquery/jquery-3.3.1.min.js",
+        path.libs   +   "aos-next/dist/aos.js",
         path.js     +   "main.js",
     ], {allowEmpty: true })
     .pipe(sourcemaps.init())

@@ -1,11 +1,14 @@
 .footer {
     background: $dark-blue;
-
+    position: relative;
     &-inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 80px 0;
+        @include respond-below(md) {
+            flex-direction: column;
+        } 
         
         .logo {
             flex: 1;
@@ -72,8 +75,33 @@
         p {
             color: $blue-3;
             text-align: right;
-            padding: 20px 0;
+            padding: 40px 0;
             font-size: .8em;
+            @include respond-below(md) {
+                text-align: center;
+            } 
+        }
+    }
+
+    .up-button {
+        background: $blue-4;
+        width: 60px;
+        height: 40px;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 100px;
+        bottom: 0;
+        position: absolute;
+        border-radius: 20% 20% 0 0;
+        transition: background 250ms ease-out;
+        &:hover {
+            background: rgba($blue-4, .8);
+            transition: background 250ms ease-out;
+        }
+        i {
+            color: $soft-gray;
         }
     }
 }
